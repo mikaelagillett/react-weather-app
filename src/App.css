@@ -1,38 +1,146 @@
 .App {
+  font-family: "Montserrat", sans-serif;
+  width: 500px;
+  height: max-content;
+  margin: 0 auto;
+  color: rgb(255, 255, 255);
+}
+.app-background {
+  background-color: black;
+  background-image: url("/public/images/foggy-weather.jpg");
+  background-position: center center;
+  background-size: cover;
+  padding: 10px 30px;
+}
+button {
+  border: none;
+  background: none;
+  color: rgb(255, 255, 255);
+}
+header {
+  text-align: right;
+}
+header a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+form {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form input {
+  border: 0;
+  border-bottom: solid;
+  width: 75%;
+  background: none;
+  color: rgb(255, 255, 255);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul {
+  list-style-type: none;
+  line-height: 50px;
+  padding: 0 70px 0 50px !important;
+  font-weight: 600;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+li {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+}
+footer {
+  display: flex;
+  align-items: flex-end;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-top: 20px;
 }
-
-.App-link {
-  color: #61dafb;
+footer a {
+  color: rgb(255, 255, 255);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+hr {
+  margin: 11px 0 !important;
+  color: white !important;
+  opacity: 0.4 !important;
+}
+.description {
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 5pt;
+  padding-top: 20px;
+  display: inline-block;
+}
+.current-location-icon {
+  float: right;
+  font-size: 35px;
+  font-weight: lighter;
+  padding-top: 15px;
+}
+.current-city,
+.current-country {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+}
+.current-weather {
+  font-size: 120px;
+  font-weight: 700;
+  padding: 40px;
+  line-height: 1;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.current-temp {
+  font-size: 100px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.drop-down-button,
+.close-drop-down-button {
+  display: block;
+  margin: 0 auto;
+  font-size: 20px;
+}
+.hidden {
+  display: none;
+}
+.weather-description {
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+}
+.forecast-weather {
+  font-size: 29px;
+  text-align: left;
+}
+.forecast-temp {
+  font-weight: 600;
+}
+.forecast-day {
+  font-weight: 600;
+}
+.forecast-date {
+  font-weight: 500;
+  font-size: 14px;
+}
+.inactive {
+  text-decoration: underline;
+}
+.inactive:hover {
+  cursor: pointer;
+}
+.secondary-color-clear {
+  color: rgb(255, 232, 219);
+}
+.secondary-color-thunderstorm {
+  color: rgb(255, 244, 202);
+}
+.secondary-color-mist {
+  color: rgb(150, 192, 207);
+}
+.secondary-color-cloudy {
+  color: rgb(85, 118, 130);
+}
+.secondary-color-rain {
+  color: rgb(255, 244, 202);
+}
+.secondary-color-snow {
+  color: rgb(73, 144, 89);
 }
