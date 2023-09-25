@@ -1,0 +1,48 @@
+.description {
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 5pt;
+  padding-top: 20px;
+  display: inline-block;
+}
+.current-location-icon {
+  float: right;
+  font-size: 35px;
+  font-weight: lighter;
+  padding-top: 15px;
+}
+.current-city,
+.current-country {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+}
+.current-weather {
+  font-size: 120px;
+  font-weight: 700;
+  padding: 40px;
+  line-height: 1;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.current-temp {
+  font-size: 100px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.drop-down-button,
+.close-drop-down-button {
+  display: block;
+  margin: 0 auto;
+  font-size: 20px;
+}
+.hidden {
+  display: none;
+}
+.weather-description {
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+}
