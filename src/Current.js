@@ -1,4 +1,5 @@
 import CurrentDropDown from "./CurrentDropDown";
+import "./Current.css";
 
 function Current() {
   return (

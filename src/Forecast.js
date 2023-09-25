@@ -1,4 +1,5 @@
 import GetIcon from "./GetIcon";
+import "./Forecast.css";
 
 function Forecast(props) {
   return (
