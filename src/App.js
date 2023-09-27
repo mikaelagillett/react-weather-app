@@ -17,19 +17,29 @@ function App() {
             °F
           </a>
         </header>
-        <form className="search-form" id="search-form">
-          <button type="submit">
-            <i className="fa-solid fa-magnifying-glass search-icon"></i>
-          </button>
-          <input type="text" className="city-search-bar" id="city-search-bar" />
-        </form>
+        <div className="grid grid-2-columns">
+          <div className="">
+            <form className="search-form" id="search-form">
+              <button type="submit">
+                <i className="fa-solid fa-magnifying-glass search-icon"></i>
+              </button>
+              <input
+                type="text"
+                className="city-search-bar"
+                id="city-search-bar"
+              />
+            </form>
 
-        <Current />
-        <hr />
-        <Forecast day="Tuesday" date="September 19th, 2023" temp={12} />
-        <Forecast day="Wednesday" date="September 20th, 2023" temp={15} />
-        <Forecast day="Thursday" date="September 21st, 2023" temp={19} />
-        <Forecast day="Friday" date="September 22nd, 2023" temp={23} />
+            <Current />
+          </div>
+          <div className="forecast-section">
+            <hr />
+            <Forecast day="Tuesday" date="September 19th, 2023" temp={12} />
+            <Forecast day="Wednesday" date="September 20th, 2023" temp={15} />
+            <Forecast day="Thursday" date="September 21st, 2023" temp={19} />
+            <Forecast day="Friday" date="September 22nd, 2023" temp={23} />
+          </div>
+        </div>
         <footer>
           <a
             href="https://github.com/mikaelagillett/react-weather-app"

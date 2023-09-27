@@ -1,7 +1,6 @@
 .App {
   font-family: "Montserrat", sans-serif;
-  width: 500px;
-  height: max-content;
+  height: auto;
   margin: 0 auto;
   color: rgb(255, 255, 255);
 }
@@ -59,6 +58,20 @@ hr {
   opacity: 0.4 !important;
 }
 
+.grid {
+  display: grid;
+}
+.grid-2-columns {
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 20px;
+}
+
+.forecast-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .inactive {
   text-decoration: underline;
 }
@@ -82,4 +95,14 @@ hr {
 }
 .secondary-color-snow {
   color: rgb(73, 144, 89);
+}
+@media (max-width: 960px) {
+  .grid {
+    display: block;
+  }
+}
+@media (max-width: 500px) {
+  .App {
+    width: 500px;
+  }
 }

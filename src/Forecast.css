@@ -1,6 +1,6 @@
 .forecast-weather {
   font-size: 29px;
-  text-align: left;
+  text-align: center;
 }
 .forecast-temp {
   font-weight: 600;
@@ -11,4 +11,9 @@
 .forecast-date {
   font-weight: 500;
   font-size: 14px;
+}
+@media (max-width: 500px) {
+  .forecast-weather {
+    text-align: left;
+  }
 }

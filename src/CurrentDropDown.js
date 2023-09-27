@@ -12,10 +12,28 @@ function CurrentDropDown() {
 
   if (dropDown === "closed") {
     return (
-      <div className="currentDropDown">
-        <button className="drop-down-button" onClick={openDropDown}>
-          <i className="fa-solid fa-circle-chevron-down"></i>
-        </button>
+      <div>
+        <div className="currentDropDown d-none d-md-block d-lg-none">
+          <button className="drop-down-button" onClick={openDropDown}>
+            <i className="fa-solid fa-circle-chevron-down"></i>
+          </button>
+        </div>
+        <div className="currentInfo d-lg-block d-md-none">
+          <div className="current-drop-down">
+            <span className="weather-description"></span>
+            <ul className="descriptors">
+              <li className="feels-like">
+                feels like: <span id="current-feels-like"></span>
+              </li>
+              <li className="humidity">
+                humidity: <span id="current-humidity"></span>
+              </li>
+              <li className="wind-speed">
+                wind speed: <span id="current-wind-speed"></span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     );
   } else if (dropDown === "open") {
@@ -34,7 +52,10 @@ function CurrentDropDown() {
               wind speed: <span id="current-wind-speed"></span>
             </li>
           </ul>
-          <button className="close-drop-down-button" onClick={closeDropDown}>
+          <button
+            className="close-drop-down-button d-none d-md-block d-lg-none"
+            onClick={closeDropDown}
+          >
             <i className="fa-solid fa-circle-chevron-up"></i>
           </button>
         </div>

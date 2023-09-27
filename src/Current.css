@@ -6,6 +6,10 @@
   padding-top: 20px;
   display: inline-block;
 }
+.current {
+  padding-left: 40px;
+  padding-right: 40px;
+}
 .current-location-icon {
   float: right;
   font-size: 35px;
@@ -21,7 +25,7 @@
 .current-weather {
   font-size: 120px;
   font-weight: 700;
-  padding: 40px;
+  padding: 40px 0px;
   line-height: 1;
   align-items: center;
   display: flex;
@@ -45,4 +49,14 @@
   display: flex;
   justify-content: center;
   font-weight: 600;
+}
+
+@media (max-width: 960px) {
+  .current {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .current-weather {
+    padding: 40px;
+  }
 }
