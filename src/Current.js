@@ -1,22 +1,22 @@
 import CurrentDropDown from "./CurrentDropDown";
 import "./Current.css";
 
-function Current() {
+function Current(props) {
   return (
     <div className="current">
       <span className="description" id="description">
         Today's Forecast Conditions
       </span>
-      <button className="current-location-icon" id="current-location-button">
+      <button className="current-location-icon">
         <i className="fa-regular fa-compass"></i>
       </button>
       <br />
       <span className="current-city" id="current-city">
-        Englehart,
+        {props.data.city},
       </span>
       <br />
       <span className="current-country" id="current-country">
-        Canada
+        {props.data.country}
       </span>
       <br />
       <span className="current-date" id="current-date">
@@ -25,10 +25,15 @@ function Current() {
       <div className="current-weather">
         <i className="wi wi-cloudy" id="main-icon"></i>
         <span className="current-temp" id="current-temp">
-          9°
+          {Math.round(props.data.temperature.current)}°
         </span>
       </div>
-      <CurrentDropDown />
+      <CurrentDropDown
+        feelsLike={Math.round(props.data.temperature.feels_like)}
+        humidity={props.data.temperature.humidity}
+        wind={Math.round(props.data.wind)}
+        description={props.data.description}
+      />
     </div>
   );
 }

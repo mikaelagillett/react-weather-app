@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function CurrentDropDown() {
+function CurrentDropDown(props) {
   const [dropDown, setDropDown] = useState("closed");
   function openDropDown() {
     setDropDown("open");
@@ -20,16 +20,16 @@ function CurrentDropDown() {
         </div>
         <div className="currentInfo d-lg-block d-md-none">
           <div className="current-drop-down">
-            <span className="weather-description"></span>
+            <span className="weather-description">{props.description}</span>
             <ul className="descriptors">
               <li className="feels-like">
-                feels like: <span id="current-feels-like"></span>
+                feels like: <span>{props.feelsLike}</span>
               </li>
               <li className="humidity">
-                humidity: <span id="current-humidity"></span>
+                humidity: <span>{props.humidity}</span>
               </li>
               <li className="wind-speed">
-                wind speed: <span id="current-wind-speed"></span>
+                wind speed: <span>{props.wind}</span>
               </li>
             </ul>
           </div>
@@ -40,16 +40,16 @@ function CurrentDropDown() {
     return (
       <div className="currentDropDown">
         <div className="current-drop-down">
-          <span className="weather-description"></span>
+          <span className="weather-description">{props.description}</span>
           <ul className="descriptors">
             <li className="feels-like">
-              feels like: <span id="current-feels-like"></span>
+              feels like: <span>{props.feelsLike}</span>
             </li>
             <li className="humidity">
-              humidity: <span id="current-humidity"></span>
+              humidity: <span>{props.humidity}</span>
             </li>
             <li className="wind-speed">
-              wind speed: <span id="current-wind-speed"></span>
+              wind speed: <span>{props.wind}</span>
             </li>
           </ul>
           <button
