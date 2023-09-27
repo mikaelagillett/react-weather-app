@@ -1,5 +1,6 @@
 import CurrentDropDown from "./CurrentDropDown";
 import Date from "./Date";
+import GetIcon from "./GetIcon";
 import "./Current.css";
 
 function Current(props) {
@@ -24,7 +25,7 @@ function Current(props) {
         <Date />
       </span>
       <div className="current-weather">
-        <i className="wi wi-cloudy" id="main-icon"></i>
+        <GetIcon weather={props.data.description} />
         <span className="current-temp" id="current-temp">
           {Math.round(props.data.temperature.current)}°
         </span>
