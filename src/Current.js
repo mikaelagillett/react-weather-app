@@ -1,4 +1,5 @@
 import CurrentDropDown from "./CurrentDropDown";
+import Date from "./Date";
 import "./Current.css";
 
 function Current(props) {
@@ -20,7 +21,7 @@ function Current(props) {
       </span>
       <br />
       <span className="current-date" id="current-date">
-        Monday, September 18th 10:02
+        <Date />
       </span>
       <div className="current-weather">
         <i className="wi wi-cloudy" id="main-icon"></i>
