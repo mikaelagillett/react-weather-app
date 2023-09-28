@@ -8,7 +8,7 @@ function App() {
   const [background, setBackground] = useState("");
   const [secondaryColor, setSecondaryColor] = useState("");
   function changeDesign(description) {
-    if (description === "clear sky") {
+    if (description.includes("clear")) {
       setBackground("background-clear");
       setSecondaryColor("secondary-color-clear");
     } else if (description.includes("clouds" || "cloudy")) {

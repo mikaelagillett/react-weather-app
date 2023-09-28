@@ -1,15 +1,50 @@
 import Forecast from "./Forecast";
+import axios from "axios";
+import React, { useState } from "react";
+import { useEffect } from "react";
+function ForecastSection(props) {
+  const [forecastData, setForecastData] = useState({ ready: false });
 
-function ForecastSection() {
-  return (
-    <div>
-      <hr />
-      <Forecast day="Tuesday" date="September 19th, 2023" temp={12} />
-      <Forecast day="Wednesday" date="September 20th, 2023" temp={15} />
-      <Forecast day="Thursday" date="September 21st, 2023" temp={19} />
-      <Forecast day="Friday" date="September 22nd, 2023" temp={23} />
-    </div>
-  );
+  function handleResponse(response) {
+    setForecastData({
+      ready: true,
+      dataArray: response.data.daily,
+      coordinates: response.data.coordinates,
+    });
+  }
+
+  useEffect(() => {
+    setForecastData({ ready: false });
+  }, [props.city, props.unit]);
+
+  if (forecastData.ready) {
+    return (
+      <div>
+        <hr />
+        {forecastData.dataArray.map(function (daily, index) {
+          if (index < 4) {
+            return (
+              <span key={index}>
+                <Forecast
+                  day={index + 1}
+                  forecastData={daily}
+                  coordinates={forecastData.coordinates}
+                  secondaryColor={props.secondaryColor}
+                />
+              </span>
+            );
+          } else {
+            return null;
+          }
+        })}
+      </div>
+    );
+  } else {
+    let apiKey = "5332bf2a40c7e9tc684f12abo0f0ab54";
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${props.city}&key=${apiKey}&units=${props.unit}`;
+    axios.get(apiUrl).then(handleResponse);
+    return null;
+  }
 }
 
 export default ForecastSection;
