@@ -20,11 +20,14 @@ function Forecast(props) {
       <div className="row">
         <div className="col-5">
           <span className="forecast-day">
-            <Date forecastDay={props.day} />
+            <Date forecastDay={props.day} coordinates={props.coordinates} />
             <br />
             <span className="forecast-date">
               <span className={props.secondaryColor}>
-                <Date forecastDate={props.day} />
+                <Date
+                  forecastDate={props.day}
+                  coordinates={props.coordinates}
+                />
               </span>
             </span>
           </span>

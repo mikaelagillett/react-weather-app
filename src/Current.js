@@ -29,7 +29,7 @@ function Current(props) {
       </span>
       <br />
       <span className="current-date" id="current-date">
-        <Date />
+        <Date coordinates={props.data.coordinates} />
       </span>
       <div className="current-weather">
         <GetIcon weather={props.data.description} />
