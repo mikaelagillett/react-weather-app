@@ -5,12 +5,16 @@ import Loading from "./Loading";
 import Current from "./Current";
 import ForecastSection from "./ForecastSection";
 
-function Weather() {
+function Weather(props) {
   const [unit, setUnit] = useState("metric");
   const [city, setCity] = useState("Toronto");
   const [cActiveStatus, setCStatus] = useState("active");
   const [fActiveStatus, setFStatus] = useState("inactive");
-  const [weatherData, setWeatherData] = useState({ ready: false });
+  const [weatherData, setWeatherData] = useState({
+    ready: false,
+    description: "clear",
+  });
+
   function search(event) {
     event.preventDefault();
     callApi([city, unit]);
@@ -35,6 +39,13 @@ function Weather() {
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${data[0]}&key=${apiKey}&units=${data[1]}`;
     axios.get(apiUrl).then(handleResponse);
   }
+  function callGeoApi(response) {
+    let apiKey = "5332bf2a40c7e9tc684f12abo0f0ab54";
+    let lat = response.coords.latitude;
+    let lon = response.coords.longitude;
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}&key=${apiKey}&units=${unit}`;
+    axios.get(apiUrl).then(handleResponse);
+  }
   function changeCelcius(event) {
     event.preventDefault();
     setUnit("metric");
@@ -50,6 +61,7 @@ function Weather() {
     callApi([city, "imperial"]);
   }
   if (weatherData.ready) {
+    props.changeDesign(weatherData.description);
     return (
       <div>
         <header>
@@ -74,10 +86,18 @@ function Weather() {
               />
             </form>
 
-            <Current data={weatherData} />
+            <Current
+              data={weatherData}
+              callGeoApi={callGeoApi}
+              secondaryColor={props.secondaryColor}
+            />
           </div>
           <div className="forecast-section">
-            <ForecastSection city={weatherData.city} unit={unit} />
+            <ForecastSection
+              city={weatherData.city}
+              unit={unit}
+              secondaryColor={props.secondaryColor}
+            />
           </div>
         </div>
       </div>

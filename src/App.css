@@ -7,9 +7,6 @@
 }
 .app-background {
   background-color: black;
-  background-image: url("/public/images/foggy-weather.jpg");
-  background-position: center center;
-  background-size: cover;
   min-height: 100vh;
   padding: 10px 30px;
 }
@@ -22,8 +19,8 @@ header {
   text-align: right;
 }
 header a {
-  color: rgb(255, 255, 255);
   text-decoration: none;
+  color: white;
 }
 form {
   text-align: center;
@@ -74,11 +71,35 @@ hr {
   justify-content: center;
 }
 
-.inactive {
-  text-decoration: underline;
+.background-clear {
+  background-image: url("/public/images/clear.jpg");
+  background-position: center center;
+  background-size: cover;
 }
-.inactive:hover {
-  cursor: pointer;
+.background-mist {
+  background-image: url("/public/images/foggy-weather.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+.background-cloudy {
+  background-image: url("/public/images/clouds.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+.background-rain {
+  background-image: url("/public/images/rain.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+.background-thunderstorm {
+  background-image: url("/public/images/thunderstorm.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+.background-snow {
+  background-image: url("/public/images/snow.jpg");
+  background-position: center center;
+  background-size: cover;
 }
 .secondary-color-clear {
   color: rgb(255, 232, 219);
@@ -97,6 +118,12 @@ hr {
 }
 .secondary-color-snow {
   color: rgb(73, 144, 89);
+}
+.inactive {
+  text-decoration: underline;
+}
+.inactive:hover {
+  cursor: pointer;
 }
 @media (max-width: 960px) {
   .grid {

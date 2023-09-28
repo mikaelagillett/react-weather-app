@@ -4,12 +4,17 @@ import GetIcon from "./GetIcon";
 import "./Current.css";
 
 function Current(props) {
+  function getGeoLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(props.callGeoApi);
+  }
+
   return (
     <div className="current">
-      <span className="description" id="description">
+      <span className={("description", props.secondaryColor)}>
         Today's Forecast Conditions
       </span>
-      <button className="current-location-icon">
+      <button className="current-location-icon" onClick={getGeoLocation}>
         <i className="fa-regular fa-compass"></i>
       </button>
       <br />
