@@ -34,6 +34,7 @@ function Weather(props) {
       wind: response.data.wind.speed,
       coordinates: response.data.coordinates,
     });
+    setCity(response.data.city);
   }
   function callApi(data) {
     let apiKey = "5332bf2a40c7e9tc684f12abo0f0ab54";
