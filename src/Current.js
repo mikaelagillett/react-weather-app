@@ -11,8 +11,10 @@ function Current(props) {
 
   return (
     <div className="current">
-      <span className={("description", props.secondaryColor)}>
-        Today's Forecast Conditions
+      <span className="description">
+        <span className={props.secondaryColor}>
+          Today's Forecast Conditions
+        </span>
       </span>
       <button className="current-location-icon" onClick={getGeoLocation}>
         <i className="fa-regular fa-compass"></i>

@@ -10,38 +10,7 @@
   min-height: 100vh;
   padding: 10px 30px;
 }
-button {
-  border: none;
-  background: none;
-  color: rgb(255, 255, 255);
-}
-header {
-  text-align: right;
-}
-header a {
-  text-decoration: none;
-  color: white;
-}
-form {
-  text-align: center;
-}
-form input {
-  border: 0;
-  border-bottom: solid;
-  width: 75%;
-  background: none;
-  color: rgb(255, 255, 255);
-}
-ul {
-  list-style-type: none;
-  line-height: 50px;
-  padding: 0 70px 0 50px !important;
-  font-weight: 600;
-}
-li {
-  display: flex;
-  justify-content: space-between;
-}
+
 footer {
   display: flex;
   align-items: flex-end;
@@ -75,31 +44,37 @@ hr {
   background-image: url("/public/images/clear.jpg");
   background-position: center center;
   background-size: cover;
+  min-height: 100vh;
 }
 .background-mist {
   background-image: url("/public/images/foggy-weather.jpg");
   background-position: center center;
   background-size: cover;
+  min-height: 100vh;
 }
 .background-cloudy {
   background-image: url("/public/images/clouds.jpg");
   background-position: center center;
   background-size: cover;
+  min-height: 100vh;
 }
 .background-rain {
   background-image: url("/public/images/rain.jpg");
   background-position: center center;
   background-size: cover;
+  min-height: 100vh;
 }
 .background-thunderstorm {
   background-image: url("/public/images/thunderstorm.jpg");
   background-position: center center;
   background-size: cover;
+  min-height: 100vh;
 }
 .background-snow {
   background-image: url("/public/images/snow.jpg");
   background-position: center center;
   background-size: cover;
+  min-height: 100vh;
 }
 .secondary-color-clear {
   color: rgb(255, 232, 219);
