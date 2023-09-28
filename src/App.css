@@ -1,13 +1,10 @@
 .App {
   font-family: "Montserrat", sans-serif;
   height: auto;
-  min-height: 100vh;
   margin: 0 auto;
   color: rgb(255, 255, 255);
 }
 .app-background {
-  background-color: black;
-  min-height: 100vh;
   padding: 10px 30px;
 }
 
