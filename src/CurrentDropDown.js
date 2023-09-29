@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./CurrentDropDown.css";
 
 function CurrentDropDown(props) {
   const [dropDown, setDropDown] = useState("closed");
@@ -13,12 +14,12 @@ function CurrentDropDown(props) {
   if (dropDown === "closed") {
     return (
       <div>
-        <div className="currentDropDown d-none d-md-block d-lg-none">
+        <div className="currentDropDown ">
           <button className="drop-down-button" onClick={openDropDown}>
             <i className="fa-solid fa-circle-chevron-down"></i>
           </button>
         </div>
-        <div className="currentInfo d-lg-block d-md-none">
+        <div className="currentInfo">
           <div className="current-drop-down">
             <span className="weather-description">{props.description}</span>
             <ul className="descriptors">
@@ -52,10 +53,7 @@ function CurrentDropDown(props) {
               wind speed: <span>{props.wind}</span>
             </li>
           </ul>
-          <button
-            className="close-drop-down-button d-none d-md-block d-lg-none"
-            onClick={closeDropDown}
-          >
+          <button className="close-drop-down-button" onClick={closeDropDown}>
             <i className="fa-solid fa-circle-chevron-up"></i>
           </button>
         </div>

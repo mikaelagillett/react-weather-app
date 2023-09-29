@@ -42,36 +42,42 @@ hr {
   background-position: center center;
   background-size: cover;
   min-height: 100vh;
+  padding: 10px 30px;
 }
 .background-mist {
   background-image: url("/public/images/foggy-weather.jpg");
   background-position: center center;
   background-size: cover;
   min-height: 100vh;
+  padding: 10px 30px;
 }
 .background-cloudy {
   background-image: url("/public/images/clouds.jpg");
   background-position: center center;
   background-size: cover;
   min-height: 100vh;
+  padding: 10px 30px;
 }
 .background-rain {
   background-image: url("/public/images/rain.jpg");
   background-position: center center;
   background-size: cover;
   min-height: 100vh;
+  padding: 10px 30px;
 }
 .background-thunderstorm {
   background-image: url("/public/images/thunderstorm.jpg");
   background-position: center center;
   background-size: cover;
   min-height: 100vh;
+  padding: 10px 30px;
 }
 .background-snow {
   background-image: url("/public/images/snow.jpg");
   background-position: center center;
   background-size: cover;
   min-height: 100vh;
+  padding: 10px 30px;
 }
 .secondary-color-clear {
   color: rgb(255, 232, 219);
@@ -100,10 +106,5 @@ hr {
 @media (max-width: 960px) {
   .grid {
     display: block;
-  }
-}
-@media (max-width: 500px) {
-  .App {
-    width: 500px;
   }
 }
