@@ -1,14 +1,14 @@
 .drop-down-button,
 .close-drop-down-button {
-  display: none;
+  display: none !important;
 }
 
 @media (max-width: 960px) {
   .drop-down-button,
   .close-drop-down-button {
-    display: block;
+    display: block !important;
   }
   .currentInfo {
-    display: none;
+    display: none !important;
   }
 }
